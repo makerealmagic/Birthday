@@ -35,7 +35,7 @@
         <div class="container d-flex justify-content-center rounded main ">
             <h3 class="display-3 fw-bold text-danger">Birthday Gift</h3>
             <input type="text" class="rounded" placeholder="Enter your Name" name="uname" id="rname">
-            <input type="button" value="Click" name="btn" class="my-2 btn btn-primary text-light fw-bold" onclick="raki()">
+            <input type="button" value="Click" name="btn" class="my-2 btn btn-primary text-light fw-bold ent" onclick="raki()">
         </div>
             
             
@@ -44,10 +44,14 @@
 
 
     <script>
-        function raki(){
+        function raki(a){
             let rname = document.getElementById("rname").value;
+            
             if (rname === "Nisha" || rname === "Nisha ") {
                let raki =  window.open("surprise.html", "_self");
+            }
+            if(rname == ""){
+                alert("Please Enter Your Name");
             }
             else if(rname === "nisha" || rname === "nisha ") {
                let raki =  window.open("surprise.html", "_self");
@@ -62,7 +66,19 @@
                 alert(`${rname} Waiting for your Birthday`)
                 location.reload();
             }
+        
+           
         }
+        var raname = document.getElementById("rname");
+        raname.addEventListener('keyup', (a)=>{
+            if (a.key === "Enter") {
+                return raki();
+            }
+            
+        })
+        
+        
+
     
       
     </script>
