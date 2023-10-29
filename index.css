@@ -34,6 +34,6 @@ body{
     border: 1px solid black;
     background: var(--meg);
     background-size: cover;
-    background-position: top;
+    background-position: var(--pos);
     transform-style: preserve-3d;
 }
